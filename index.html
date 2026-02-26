@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Crown | Art Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <div class="top-bar text-end px-5 py-2 bg-light">
+        <small>Welcome to Canvas Crown | <a href="#">Sign Up / Login</a></small>
+    </div>
+
+    <div class="container py-3">
+        <div class="row align-items-center">
+            <div class="col-lg-3">
+                <h3 class="fw-bold">
+                    <span class="text-primary">canvas</span>crown
+                </h3>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search paintings...">
+                    <button class="btn btn-outline-secondary">Search</button>
+                </div>
+            </div>
+
+            <div class="col-lg-3 text-end">
+                <button class="btn btn-outline-dark position-relative">
+                    Cart
+                    <span class="badge bg-primary" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-top border-bottom">
+        <div class="container">
+            <div class="collapse navbar-collapse show">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-3"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item px-3"><a class="nav-link" href="#">Artworks</a></li>
+                    <li class="nav-item px-3"><a class="nav-link" href="#">By Style</a></li>
+                    <li class="nav-item px-3"><a class="nav-link" href="#">Exhibitions</a></li>
+                    <li class="nav-item px-3"><a class="nav-link" href="#">Artists</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="artCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#artCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#artCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#artCarousel" data-bs-slide-to="2"></button>
+        </div>
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active slide-1">
+                <div class="carousel-caption text-white">
+                    <h1 class="display-4 fw-bold">Bring Home a Masterpiece</h1>
+                    <p>Discover curated artworks from emerging artists.</p>
+                    <a href="#" class="btn btn-danger btn-lg mt-3">Explore</a>
+                </div>
+            </div>
+
+            <div class="carousel-item slide-2">
+                <div class="carousel-caption text-white">
+                    <h1 class="display-4 fw-bold">Transform Your Space</h1>
+                    <p>Premium framed paintings for modern homes.</p>
+                    <a href="#" class="btn btn-danger btn-lg mt-3">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="carousel-item slide-3">
+                <div class="carousel-caption text-white">
+                    <h1 class="display-4 fw-bold">Support Independent Artists</h1>
+                    <p>Buy original artwork directly from creators.</p>
+                    <a href="#" class="btn btn-danger btn-lg mt-3">View Collection</a>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#artCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#artCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+
+    </div>
+
+
+    <section class="container my-5">
+        <h4 class="mb-4 fw-bold">TOP COLLECTIONS</h4>
+
+        <div class="row g-4 text-center">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm collection-card">
+                    <img src="https://i.pinimg.com/736x/6c/9d/fa/6c9dfa8e0f18aa957bc00f89e639ce29.jpg"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h6 class="fw-semibold">Golden Ships</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm collection-card">
+                    <img src="https://i.pinimg.com/1200x/c8/21/95/c82195bc26ab200b3b9426139847d7c5.jpg"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h6 class="fw-semibold">Nature Collection</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm collection-card">
+                    <img src="https://i.pinimg.com/1200x/2e/02/9b/2e029b8b3330a0abe3c0fc0abbb3791f.jpg"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h6 class="fw-semibold">Art Meets Nature</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card border-0 shadow-sm collection-card">
+                    <img src="https://i.pinimg.com/1200x/f1/c5/71/f1c571efbcfbf3a78ed037d809ad0a89.jpg"
+                        class="card-img-top">
+                    <div class="card-body">
+                        <h6 class="fw-semibold">Girl Paintings</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="container my-5">
+            <h4 class="mb-4 fw-bold">CURATED WORKS</h4>
+
+            <div class="row g-4">
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://i.pinimg.com/736x/da/16/04/da160408c177a315272409e14c6c25fb.jpg"
+                            class="card-img-top">
+                        <div class="card-body text-center">
+                            <h6 class="fw-semibold">Chasing the Time 03</h6>
+                            <p class="text-muted small">Size: 36x36 inches</p>
+                            <p class="fw-bold">₹45,000</p>
+                            <button class="btn btn-outline-dark btn-sm add-to-cart">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://i.pinimg.com/1200x/79/11/b0/7911b03dbc9b8bd5201d8f31473717d8.jpg"
+                            class="card-img-top">
+                        <div class="card-body text-center">
+                            <h6 class="fw-semibold">Life in Pairs II</h6>
+                            <p class="text-muted small">Size: 36x48 inches</p>
+                            <p class="fw-bold">₹60,000</p>
+                            <button class="btn btn-outline-dark btn-sm add-to-cart">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://i.pinimg.com/736x/c9/a4/64/c9a4649149c9afdc1399fd3efb4ec8ac.jpg"
+                            class="card-img-top">
+                        <div class="card-body text-center">
+                            <h6 class="fw-semibold">Nostalgia of Steam</h6>
+                            <p class="text-muted small">Size: 36x48 inches</p>
+                            <p class="fw-bold">₹35,000</p>
+                            <button class="btn btn-outline-dark btn-sm add-to-cart">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://i.pinimg.com/1200x/c4/98/44/c498442f996e2a82d4d79ecc0164b605.jpg"
+                            class="card-img-top">
+                        <div class="card-body text-center">
+                            <h6 class="fw-semibold">Ganesha</h6>
+                            <p class="text-muted small">Size: 30x24 inches</p>
+                            <p class="fw-bold">₹15,000</p>
+                            <button class="btn btn-outline-dark btn-sm add-to-cart">
+                                🛒 Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="container my-5">
+        <h2 class="text-center fw-bold mb-5">MEMBERSHIP PLANS</h2>
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-4 col-md-6">
+                <div class="image-price-card basic-plan">
+                    <div class="price-content">
+                        <h4 class="fw-semibold">BASIC</h4>
+                        <h1 class="display-4 fw-bold">₹499</h1>
+                        <p>/ month</p>
+
+                        <ul class="mt-4">
+                            <li>✔ Access to 100 artworks</li>
+                            <li>✔ Standard support</li>
+                            <li>✖ Premium content</li>
+                            <li>✖ Private exhibitions</li>
+                        </ul>
+
+                        <button class="btn btn-outline-light w-100 mt-4" data-bs-toggle="modal"
+                            data-bs-target="#buyModal">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+                <div class="image-price-card standard-plan">
+                    <div class="price-content">
+                        <h4 class="fw-semibold">STANDARD</h4>
+                        <h1 class="display-4 fw-bold">₹999</h1>
+                        <p>/ month</p>
+
+                        <ul class="mt-4">
+                            <li>✔ Unlimited artworks</li>
+                            <li>✔ Priority support</li>
+                            <li>✔ Premium content</li>
+                            <li>✖ Private exhibitions</li>
+                        </ul>
+
+                        <button class="btn btn-outline-light w-100 mt-4" data-bs-toggle="modal"
+                            data-bs-target="#buyModal">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+                <div class="image-price-card premium-plan">
+                    <div class="price-content">
+                        <h4 class="fw-semibold">PREMIUM</h4>
+                        <h1 class="display-4 fw-bold">₹1999</h1>
+                        <p>/ month</p>
+
+                        <ul class="mt-4">
+                            <li>✔ VIP artist access</li>
+                            <li>✔ Personal advisor</li>
+                            <li>✔ Free shipping</li>
+                            <li>✔ Private exhibitions</li>
+                        </ul>
+                        <button class="btn btn-outline-light w-100 mt-4" data-bs-toggle="modal"
+                            data-bs-target="#buyModal">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="container my-5">
+        <h2 class="text-center fw-bold mb-5">Compare Plans</h2>
+
+        <div class="table-responsive">
+            <table class="table table-bordered text-center align-middle compare-table">
+
+                <thead class="table-light">
+                    <tr>
+                        <th class="text-start">Features</th>
+                        <th>Basic</th>
+                        <th>Standard</th>
+                        <th class="premium-col">Premium</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th class="text-start">Access to Artworks</th>
+                        <td>✔</td>
+                        <td>✔</td>
+                        <td class="premium-col">✔</td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Premium Content</th>
+                        <td>✖</td>
+                        <td>✔</td>
+                        <td class="premium-col">✔</td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Private Exhibitions</th>
+                        <td>✖</td>
+                        <td>✖</td>
+                        <td class="premium-col">✔</td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Free Shipping</th>
+                        <td>✖</td>
+                        <td>✖</td>
+                        <td class="premium-col">✔</td>
+                    </tr>
+
+                    <tr>
+                        <th class="text-start">Personal Advisor</th>
+                        <td>✖</td>
+                        <td>✖</td>
+                        <td class="premium-col">✔</td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+    <div class="modal fade" id="buyModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirm Membership</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <p>You are about to purchase this membership plan.</p>
+                    <p class="fw-bold">Enjoy premium art benefits and exclusive access.</p>
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button class="btn btn-primary">
+                        Proceed to Payment
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-9"></div>
+
+            <div class="card form-card shadow-lg border-0 rounded-4 p-5">
+                <h2 class="text-center fw-bold mb-4">Sell Your Artwork</h2>
+
+                <form class="needs-validation" novalidate>
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Please enter your name.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Artwork Type</label>
+                            <select class="form-select" required>
+                                <option value="">Choose...</option>
+                                <option>Abstract</option>
+                                <option>Nature</option>
+                                <option>Modern</option>
+                                <option>Traditional</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Please select artwork type.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Expected Price (₹)</label>
+                            <input type="number" class="form-control" required>
+                            <div class="invalid-feedback">
+                                Please enter price.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label class="form-label d-block">Framed?</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="frame" required>
+                                <label class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="frame" required>
+                                <label class="form-check-label">No</label>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" required>
+                                <label class="form-check-label">
+                                    I agree to platform terms & conditions
+                                </label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 text-center mt-3">
+                            <button class="btn btn-primary px-5 rounded-pill">
+                                Submit Artwork
+                            </button>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+        </div>
+    </section>
+    <section class="container my-4">
+        <div class="alert alert-success d-flex justify-content-between align-items-center">
+            <span>🎉 New artworks have been added this week!</span>
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+    </section>
+
+    <footer class="footer mt-auto py-4">
+        <div class="container">
+            <div class="row text-white">
+
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Canvas Crown</h5>
+                    <p class="small">
+                        Discover and collect exclusive artworks from talented independent artists worldwide.
+                    </p>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <h6 class="fw-semibold">Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Artworks</a></li>
+                        <li><a href="#" class="footer-link">Membership</a></li>
+                        <li><a href="#" class="footer-link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                    <h6 class="fw-semibold">Follow Us</h6>
+                    <div class="d-flex gap-3">
+                        <span>🌐</span>
+                        <span>🕊️</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="border-light">
+
+            <div class="text-center text-white small">
+                © 2026 Canvas Crown | Designed for Art Lovers
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

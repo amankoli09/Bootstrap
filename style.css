@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-item {
+    height: 550px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.slide-1 {
+    background-image: url('https://imagecdn.99acres.com//microsite/wp-content/blogs.dir/6161/files/2023/11/wall-furniture-design-stockpack-pixabay.jpg?1735021788');
+}
+
+.slide-2 {
+    background-image: url('https://m.media-amazon.com/images/I/71ynRexZGOL._AC_UF894,1000_QL80_.jpg');
+}
+
+.slide-3 {
+    background-image: url('https://i.pinimg.com/1200x/99/a2/e9/99a2e9e05199cbee6974996a723315c1.jpg');
+}
+
+/* Overlay for better text visibility */
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-caption {
+    bottom: 30%;
+    left: 8%;
+    right: auto;
+    text-align: left;
+    max-width: 600px;
+}
+
+.collection-card img,
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.collection-card {
+    transition: 0.3s;
+}
+
+.collection-card:hover {
+    transform: translateY(-5px);
+}
+
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.image-price-card {
+    height: 600px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: 0.4s ease;
+    display: flex;
+    align-items: center;
+}
+
+.image-price-card:hover {
+    transform: translateY(-10px);
+}
+
+.image-price-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.price-content {
+    position: relative;
+    z-index: 2;
+    padding: 50px 40px;
+    width: 100%;
+}
+
+.price-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.price-content ul li {
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.basic-plan {
+    background-image: url('https://i.pinimg.com/1200x/57/f2/99/57f299a3ddf7a941d93b6813c36b33cd.jpg');
+}
+
+.standard-plan {
+    background-image: url('https://i.pinimg.com/1200x/0b/c8/59/0bc859b7525742ad64dc982f843ac0e1.jpg');
+}
+
+.premium-plan {
+    background-image: url('https://i.pinimg.com/1200x/b6/a3/c2/b6a3c25dc1d387bd15edbc25a5f46b54.jpg');
+}
+
+.form-card {
+    position: relative;
+    overflow: hidden;
+    background-image: url('https://i.pinimg.com/1200x/41/3a/3a/413a3a93a7c61052d571d8c3b07ed728.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #000;
+}
+
+.form-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.85);
+    z-index: 0;
+}
+
+.form-card * {
+    position: relative;
+    z-index: 2;
+}
+
+.form-card {
+    backdrop-filter: blur(4px);
+}
+
+.footer {
+    background: linear-gradient(135deg, #000000, #2d2d2d);
+}
+
+.footer-link {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    color: white;
+    transition: 0.3s;
+}
+.compare-table th {
+    font-weight: 600;
+}
+
+.compare-table td,
+.compare-table th {
+    padding: 15px;
+}
+
+
+.premium-col {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
